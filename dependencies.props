@@ -1,0 +1,12 @@
+<Project>
+
+  <PropertyGroup Label="SDK Versions">
+    <NetCoreTargetVersion>net5.0-windows</NetCoreTargetVersion>
+  </PropertyGroup>
+  
+  <PropertyGroup Label="Package Versions">
+	<MicrosoftSourceLinkGithub>1.0.0</MicrosoftSourceLinkGithub>
+	<MicrosoftExtensionsConfiguration>3.1.9</MicrosoftExtensionsConfiguration>
+  </PropertyGroup>
+  
+</Project>
