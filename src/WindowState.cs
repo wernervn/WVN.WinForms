@@ -5,10 +5,10 @@ using System.Windows.Forms;
 namespace WVN.WinForms
 {
     [Serializable]
-    public class WindowSettings
+    public class WindowState
     {
         public Point Location { get; set; }
         public Size Size { get; set; }
-        public FormWindowState WindowState { get; set; }
+        public FormWindowState FormWindowState { get; set; }
     }
 }

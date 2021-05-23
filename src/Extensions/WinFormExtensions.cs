@@ -1,44 +1,41 @@
-﻿using System.IO;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace WVN.WinForms.Extensions
 {
     public static class WinFormExtensions
     {
-        public static void ResetLastPosition(this Form form)
+        private static readonly Size NullSize = new(0, 0);
+        private static readonly Point NullLocation = new(0, 0);
+
+        public static void SetWindowState(this Form form, WindowState state)
         {
-            if (File.Exists("formLayout.json"))
+            if (state.FormWindowState == FormWindowState.Normal)
             {
-                var layout = File.ReadAllText("formLayout.json").FromJson<WindowSettings>();
-                if (layout.WindowState == FormWindowState.Normal)
+                if (state.Location != NullLocation && state.Location.X >= 0 && state.Location.Y >= 0)
                 {
-                    form.Location = layout.Location;
-                    form.Size = layout.Size;
-                    return;
+                    form.Location = state.Location;
                 }
-                form.WindowState = layout.WindowState;
+
+                if (state.Size != NullSize)
+                {
+                    form.Size = state.Size;
+                }
+
+                return;
             }
+            form.WindowState = state.FormWindowState;
         }
 
-        public static void SaveLastPosition(this Form form)
+        public static WindowState GetWindowState(this Form form)
         {
-            WindowSettings layout;
-            if (File.Exists("formLayout.json"))
-            {
-                layout = File.ReadAllText("formLayout.json").FromJson<WindowSettings>();
-            }
-            else
-            {
-                layout = new WindowSettings();
-            }
-
-            layout.WindowState = form.WindowState;
+            WindowState state = new() { FormWindowState = form.WindowState };
             if (form.WindowState == FormWindowState.Normal)
             {
-                layout.Location = form.Location;
-                layout.Size = form.Size;
+                state.Location = form.Location;
+                state.Size = form.Size;
             }
-            File.WriteAllText("formLayout.json", layout.ToJson());
+            return state;
         }
     }
 }

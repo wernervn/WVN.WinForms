@@ -1,7 +1,7 @@
 rem Publishes Nuget packages to various sources - should be run on master branch after feature branch has been merged
 
 @echo OFF
-set nugetversion=1.0.0
+set nugetversion=1.0.1
 set packageid=WVN.WinForms
 set packagepath=./artifacts/%packageid%.%nugetversion%.nupkg
 set src=.\src\%packageid%.csproj

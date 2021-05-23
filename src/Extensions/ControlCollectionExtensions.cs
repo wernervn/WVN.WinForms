@@ -29,7 +29,7 @@ namespace WVN.WinForms.Extensions
 
         public static void ForEach(this Control.ControlCollection controls, Action<Control> action)
         {
-            for (int i = 0; i < controls.Count; i++)
+            for (var i = 0; i < controls.Count; i++)
             {
                 action.Invoke(controls[i]);
             }

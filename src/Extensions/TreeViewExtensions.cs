@@ -13,7 +13,7 @@ namespace WVN.WinForms.Extensions
         public static int LoadFolders(this TreeView tvw, string path, string imageKey, string filter = "")
         {
             tvw.Nodes.Clear();
-            TreeNode root = tvw.Nodes.Add(path, path, imageKey, imageKey);
+            var root = tvw.Nodes.Add(path, path, imageKey, imageKey);
             root.Tag = path;
             tvw.LoadFolders(root, path, filter);
             root.Expand();
@@ -39,8 +39,8 @@ namespace WVN.WinForms.Extensions
                 {
                     foreach (var folder in folders)
                     {
-                        string folderName = GetFolderName(folder);
-                        TreeNode node = root.Nodes.Add(folder, folderName, imageKey, imageKey);
+                        var folderName = GetFolderName(folder);
+                        var node = root.Nodes.Add(folder, folderName, imageKey, imageKey);
                         node.Tag = folder;
                         //add dummy
                         node.Nodes.Add("dummy");
@@ -48,10 +48,12 @@ namespace WVN.WinForms.Extensions
                 }
                 else
                 {
+                    // not sure what to do here
                 }
             }
             catch (Exception)
             {
+                // maybe log it here somehow?
                 throw;
             }
             finally
@@ -59,6 +61,9 @@ namespace WVN.WinForms.Extensions
                 tvw.EndUpdate();
             }
         }
+
+        private static bool Contains(this string source, string value, bool ignoreCase)
+            => ignoreCase ? source.Contains(value, StringComparison.CurrentCultureIgnoreCase) : source.Contains(value, StringComparison.CurrentCulture);
 
         #endregion
     }

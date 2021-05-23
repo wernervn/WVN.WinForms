@@ -25,5 +25,8 @@ namespace WVN.WinForms.Extensions
             control.Location = rect.Location;
             control.Size = rect.Size;
         }
+
+        public static void InvokeUI(this Control control, Action a)
+            => control.BeginInvoke(new MethodInvoker(a));
     }
 }
