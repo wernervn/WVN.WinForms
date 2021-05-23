@@ -1,6 +1,6 @@
 # Publishes Nuget packages to various sources - should be run on master branch after feature branch has been merged
 
-$version = '1.0.0'
+$version = '1.0.1'
 $package = 'WVN.WinForms'
 $path = "./artifacts/$($package).$($version).nupkg"
 
