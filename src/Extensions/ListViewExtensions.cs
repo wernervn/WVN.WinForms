@@ -1,15 +1,11 @@
-﻿using System.Windows.Forms;
-
-namespace WVN.WinForms.Extensions
+﻿namespace WVN.WinForms.Extensions;
+public static class ListViewExtensions
 {
-    public static class ListViewExtensions
+    public static void ResizeColumnsAll(this ListView lvw)
     {
-        public static void ResizeColumnsAll(this ListView lvw)
-        {
-            ColumnHeaderAutoResizeStyle resizer = lvw.Items.Count == 0 ?
-                ColumnHeaderAutoResizeStyle.HeaderSize :
-                ColumnHeaderAutoResizeStyle.ColumnContent;
-            lvw.AutoResizeColumns(resizer);
-        }
+        ColumnHeaderAutoResizeStyle resizer = lvw.Items.Count == 0 ?
+            ColumnHeaderAutoResizeStyle.HeaderSize :
+            ColumnHeaderAutoResizeStyle.ColumnContent;
+        lvw.AutoResizeColumns(resizer);
     }
 }
