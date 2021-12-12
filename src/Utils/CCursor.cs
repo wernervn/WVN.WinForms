@@ -1,22 +1,22 @@
 ﻿using System;
-using System.Windows.Forms;
 
-namespace WVN.WinForms.Utils
+namespace WVN.WinForms.Utils;
+
+#pragma warning disable S3881 // "IDisposable" should be implemented correctly
+public class CCursor : IDisposable
+#pragma warning restore S3881 // "IDisposable" should be implemented correctly
 {
-    public class CCursor : IDisposable
+    private readonly Cursor saved;
+
+    public CCursor(Cursor newCursor)
     {
-        private readonly Cursor saved;
+        saved = Cursor.Current;
 
-        public CCursor(Cursor newCursor)
-        {
-            saved = Cursor.Current;
+        Cursor.Current = newCursor;
+    }
 
-            Cursor.Current = newCursor;
-        }
-
-        public void Dispose()
-        {
-            Cursor.Current = saved;
-        }
+    public void Dispose()
+    {
+        Cursor.Current = saved;
     }
 }

@@ -1,14 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31220.234
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WVN.WinForms", "src\WVN.WinForms.csproj", "{8E13155F-B467-4788-8D84-DBC6A3BFA15E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{42603DD1-2876-4610-9323-38825B48738C}"
 	ProjectSection(SolutionItems) = preProject
 		CHANGELOG.md = CHANGELOG.md
-		Publish.bat = Publish.bat
+		NugetVersion.txt = NugetVersion.txt
 		Publish.ps1 = Publish.ps1
 		README.md = README.md
 	EndProjectSection
