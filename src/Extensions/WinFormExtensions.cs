@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace WVN.WinForms.Extensions;
+﻿namespace WVN.WinForms.Extensions;
 public static class WinFormExtensions
 {
     private static readonly Size NullSize = new(0, 0);

@@ -1,11 +1,12 @@
 <Project>
 
   <PropertyGroup Label="SDK Versions">
-    <NetCoreTargetVersion>net6.0-windows</NetCoreTargetVersion>
+    <DotnetVersion>net7.0</DotnetVersion>
+    <NetWindows>$(DotnetVersion)-windows</NetWindows>
   </PropertyGroup>
-  
+
   <PropertyGroup Label="Package Versions">
-	<MicrosoftSourceLinkGithub>1.1.1</MicrosoftSourceLinkGithub>
+    <MicrosoftSourceLinkGithub>1.1.1</MicrosoftSourceLinkGithub>
   </PropertyGroup>
-  
+
 </Project>
