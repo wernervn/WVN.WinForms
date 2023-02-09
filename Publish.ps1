@@ -12,8 +12,8 @@ dotnet pack -c Release --no-build --output pkg -p:PackageVersion=$version --nolo
 
 # WVN github - delete does not work on CLI
 # nuget delete $package $version -ApiKey $env:WVN_GITHUB_API_KEY -Source 'github' -NonInteractive
-# dotnet nuget push $path  --source 'github' --api-key $env:WVN_GITHUB_API_KEY
+dotnet nuget push $path  --source 'github' --api-key $env:WVN_GITHUB_API_KEY
 
 # Create version tag in source control
-# git tag $version
-# git push --tags
+git tag $version
+git push --tags
