@@ -1,6 +1,7 @@
 <Project>
 
   <PropertyGroup Condition=" '$(IsPackable)' == 'true' ">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <Authors>Werner van Niekerk</Authors>
     <Owners>Werner van Niekerk</Owners>
@@ -10,7 +11,7 @@
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <!-- Include PDB in the built .nupkg -->
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-    <PackageOutputPath>..\pkg</PackageOutputPath>
+    <PackageOutputPath>..\artifacts</PackageOutputPath>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 

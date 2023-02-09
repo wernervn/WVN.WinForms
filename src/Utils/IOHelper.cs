@@ -1,8 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-
-namespace WVN.WinForms.Utils;
+﻿namespace WVN.WinForms.Utils;
 internal static class IOHelper
 {
     internal static string GetFolderName(string path)

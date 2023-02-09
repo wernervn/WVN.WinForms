@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace WVN.WinForms.Utils;
+﻿namespace WVN.WinForms.Utils;
 
 #pragma warning disable S3881 // "IDisposable" should be implemented correctly
 public class CCursor : IDisposable

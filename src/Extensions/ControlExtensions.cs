@@ -1,7 +1,4 @@
-﻿using System;
-using System.Drawing;
-
-namespace WVN.WinForms.Extensions;
+﻿namespace WVN.WinForms.Extensions;
 public static class ControlExtensions
 {
     public static void HideDuringAction(this Control control, Action action)

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Drawing;
-
-namespace WVN.WinForms;
+﻿namespace WVN.WinForms;
 [Serializable]
 public class WindowState
 {
