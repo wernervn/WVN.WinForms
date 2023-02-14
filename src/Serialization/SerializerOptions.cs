@@ -8,7 +8,7 @@ namespace WVN.WinForms.Serialization
         public static JsonSerializerOptions Default
             => new()
             {
-                Converters = { new ColorJsonConverter() },
+                Converters = { new ColorJsonConverter(), new JsonStringEnumConverter() },
                 WriteIndented = true,
                 DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
                 PropertyNameCaseInsensitive = true
