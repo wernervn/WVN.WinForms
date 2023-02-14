@@ -1,7 +1,10 @@
 # Changelog
 
+## [v3.0.2]
+ - Add Default JsonSerializerOptions
+
 ## [v3.0.1]
- - Upgrade to .net 7
+ - Add ColorJsonConverter
  
  ## [v3.0.0]
  - Upgrade to .net 7
@@ -15,6 +18,7 @@
 ## [v1.0.0]
  - Reusable helpers for various WinForms controls
  
+[v3.0.2]: https://github.com/wernervn/WVN.WinForms/releases/tag/3.0.2
 [v3.0.1]: https://github.com/wernervn/WVN.WinForms/releases/tag/3.0.1
 [v3.0.0]: https://github.com/wernervn/WVN.WinForms/releases/tag/3.0.0
 [v2.0.0]: https://github.com/wernervn/WVN.WinForms/releases/tag/2.0.0
