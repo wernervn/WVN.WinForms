@@ -1,5 +1,8 @@
 # Changelog
 
+## [4.0.0]
+ - Upgrade to .net 10
+ 
 ## [v3.0.3]
  - Add Default JsonStringEnumConverter
 
@@ -21,6 +24,7 @@
 ## [v1.0.0]
  - Reusable helpers for various WinForms controls
  
+[v4.0.0]: https://github.com/wernervn/WVN.WinForms/releases/tag/4.0.0
 [v3.0.3]: https://github.com/wernervn/WVN.WinForms/releases/tag/3.0.3
 [v3.0.2]: https://github.com/wernervn/WVN.WinForms/releases/tag/3.0.2
 [v3.0.1]: https://github.com/wernervn/WVN.WinForms/releases/tag/3.0.1

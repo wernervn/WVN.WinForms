@@ -1,4 +1,5 @@
 ﻿namespace WVN.WinForms.Extensions;
+
 public static class ListViewExtensions
 {
     public static void ResizeColumnsAll(this ListView lvw)
