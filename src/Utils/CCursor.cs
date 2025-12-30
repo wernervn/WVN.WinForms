@@ -8,7 +8,7 @@ public class CCursor : IDisposable
 
     public CCursor(Cursor newCursor)
     {
-        saved = Cursor.Current;
+        saved = Cursor.Current!;
 
         Cursor.Current = newCursor;
     }

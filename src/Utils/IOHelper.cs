@@ -5,5 +5,5 @@ internal static class IOHelper
         => GetLastTokenFromString(path, Path.DirectorySeparatorChar.ToString());
 
     internal static string GetLastTokenFromString(string text, string delimiter)
-        => text.Split(new string[] { delimiter }, StringSplitOptions.None).Last();
+        => text.Split([delimiter], StringSplitOptions.None).Last();
 }

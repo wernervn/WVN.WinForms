@@ -1,4 +1,5 @@
 ﻿namespace WVN.WinForms;
+
 [Serializable]
 public class WindowState
 {
